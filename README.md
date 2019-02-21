@@ -1,10 +1,16 @@
-# Project2_zuyicai: A movie recommendation app
+# Project2_zuyicai: A movie recommendation app and the database plan
 
 This's a whole web application — a very simple one, using the web framework called Flask. Using this small application, you can get different outputs in the form of URLs.
 
 movies_tools.py is the file that I create the class and define the functional structure of this movie system; SI507_project2.py is the file that I put the movie system into practice with the appearance of URLs.
 
+In addition, part 1 of this project is just code and a Flask app, including movies_tools.py, SI507_project2.py, requirement.txt, movies_clean.csv. Part 2 of this project is a plan(see SI507_movies_database_plan.jpeg) for creating a database to represent some of the data in movies_clean.csv file. I may build for an application or analysis later on.
+
+My database diagram plan shows a viewer what tables should exist ( 4 tables: Movie, Director, Ratings, Distributor) and shows the fields each table contain. And I also show the primary key for each table and the relationships(many to many OR one to many). Hope it be clear enough to understand.
+
+The follwing is the steps for running part 1:
 Actually, I import Movie class and movie_info(a cleaned movie data csv) from movies_tools.py to make the use of "Movie" class and the cleaned data. Readers need to follow the steps to install everything needed to run this application.
+
 
 ## Getting Started
 
