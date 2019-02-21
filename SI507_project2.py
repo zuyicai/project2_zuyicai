@@ -14,6 +14,7 @@ def home_page():
     #(results will depend upon how many movies are in your movies_clean.csv file…!)
 
 @app.route('/movies/ratingsdirectly/<amt>/')#http://127.0.0.1:5000/movies/ratingsdirectly/5/
+#http://127.0.0.1:5000/movies/ratingsdirectly/10/
 #This is the route to get ratings without the render_template
 def movie_rating(amt):
     movierate = Movie(movie_info,int(amt))
@@ -23,6 +24,7 @@ def movie_rating(amt):
 
 
 @app.route('/movies/ratings/<amt>/')#http://127.0.0.1:5000/movies/ratings/10/
+#http://127.0.0.1:5000/movies/ratings/5/
 #This is the route to get ratings with the render_template
 def movie_rating_template(amt):
     movie_sample = Movie(movie_info,int(amt))
@@ -30,7 +32,8 @@ def movie_rating_template(amt):
     return render_template("movie_rating_template.html",movie_list=movie_list1)
 
 
-@app.route('/movies/recommend/<amt>/')#http://127.0.0.1:5000/movies/recommend/20/
+@app.route('/movies/recommend/<amt>/')#http://127.0.0.1:5000/movies/recommend/5/
+#http://127.0.0.1:5000/movies/recommend/10/
 # This is the template version of highly recommended <amt> movies(all scored above 8)
 def movie_highly_recommend(amt):
     recommended_movie = Movie(movie_info,int(amt))

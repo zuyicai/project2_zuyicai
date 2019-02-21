@@ -2,9 +2,9 @@
 import pandas as pd
 import random
 
-movie_info_raw = pd.DataFrame(pd.read_csv('movies_clean.csv',header=0))
-movie_info = movie_info_raw.fillna(value="NA")#why this cleaned csv tranformed into dataframe has to fill NA again?
-info_nona = movie_info_raw['IMDB Rating'].fillna(value=0)#delete na in rating column
+movie_info_raw = pd.DataFrame(pd.read_csv('movies_clean.csv',header=0))# use pandas to read the clean data csv
+movie_info = movie_info_raw.fillna(value="NA")#filling NA
+info_nona = movie_info_raw['IMDB Rating'].fillna(value=0)#delete na in rating column in order to run recommend function
 
 
 class Movie:
